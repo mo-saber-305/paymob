@@ -7,8 +7,8 @@ class PayMob
     public static function AuthenticationRequest()
     {
         $userInfo = [
-            'username' => env("PayMob_Username"),
-            'password' => env("PayMob_Password"),
+            'api_key' => env("PayMob_Username"),
+            // 'password' => env("PayMob_Password"),
         ];
 
         $postData = json_encode($userInfo);
