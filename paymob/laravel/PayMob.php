@@ -132,28 +132,28 @@ class PayMob
     public static function calcHMAC($request)
     {
         $data = $request->only([
-            'obj.amount_cents',
-            'obj.created_at',
-            'obj.currency',
-            'obj.error_occured',
-            'obj.has_parent_transaction',
-            'obj.id',
-            'obj.integration_id',
-            'obj.is_3d_secure',
-            'obj.is_auth',
-            'obj.is_capture',
-            'obj.is_refunded',
-            'obj.is_standalone_payment',
-            'obj.is_voided',
-            'obj.order.id',
-            'obj.owner',
-            'obj.pending',
-            'obj.source_data.pan',
-            'obj.source_data.sub_type',
-            'obj.source_data.type',
-            'obj.success'
+            'amount_cents',
+            'created_at',
+            'currency',
+            'error_occured',
+            'has_parent_transaction',
+            'id',
+            'integration_id',
+            'is_3d_secure',
+            'is_auth',
+            'is_capture',
+            'is_refunded',
+            'is_standalone_payment',
+            'is_voided',
+            'order.id',
+            'owner',
+            'pending',
+            'source_data_pan',
+            'source_data_sub_type',
+            'source_data_type',
+            'success'
         ]);
-        $values = array_values($data['obj']);
+        $values = array_values($data);
         foreach ($values as &$val) {
             if (is_array($val)) {
                 $val = array_values($val);
