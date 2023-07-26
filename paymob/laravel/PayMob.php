@@ -145,7 +145,7 @@ class PayMob
             'is_refunded',
             'is_standalone_payment',
             'is_voided',
-            'order.id',
+            'order',
             'owner',
             'pending',
             'source_data_pan',
